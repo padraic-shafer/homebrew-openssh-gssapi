@@ -21,6 +21,12 @@ class OpensshPatched < Formula
 
   conflicts_with 'openssh'
 
+  # Accept newer versions of openssl.
+  patch do
+    url "https://gist.githubusercontent.com/padraic-shafer/2781500a05d2d1755f6092779a4a735f/raw/fdff3e48881dfc8b2d12d6e4921fea31018618e7/openssl-version-3.1.1.patch"
+    sha256 "8842d720fea179aad16baf3d24bd4c4dec5dd677010d5ada77a598bdacf83e2f"
+  end
+
   if build.with? "keychain-support"
     patch do
       url "https://gist.githubusercontent.com/leonklingele/01c01e6d9d143fa5b1df8e2354d808e4/raw/b509dedea2a6a4bab3dc75f7be2a7a1ac1cfb24e/0001-apple-keychain-integration-other-changes.patch"
