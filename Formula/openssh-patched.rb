@@ -23,8 +23,10 @@ class OpensshPatched < Formula
 
   # Accept newer versions of openssl.
   patch do
-    url "https://gist.githubusercontent.com/padraic-shafer/2781500a05d2d1755f6092779a4a735f/raw/fdff3e48881dfc8b2d12d6e4921fea31018618e7/openssl-version-3.1.1.patch"
-    sha256 "8842d720fea179aad16baf3d24bd4c4dec5dd677010d5ada77a598bdacf83e2f"
+    # url "https://gist.githubusercontent.com/padraic-shafer/2781500a05d2d1755f6092779a4a735f/raw/fdff3e48881dfc8b2d12d6e4921fea31018618e7/openssl-version-3.1.1.patch"
+    # sha256 "8842d720fea179aad16baf3d24bd4c4dec5dd677010d5ada77a598bdacf83e2f"
+    url "https://gist.githubusercontent.com/padraic-shafer/2781500a05d2d1755f6092779a4a735f/raw/82625caf432b05ad6e9d72539591d928fbe852ae/openssl-version-3.1.1.patch"
+    sha256 "edf82806e8d5e57ba6c80b112ed39127f895023d6b07e4a7897f185d0c51e70a"
   end
 
   if build.with? "keychain-support"
